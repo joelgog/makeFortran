@@ -22,7 +22,6 @@ def read_file_and_store_words(filename):
 
     return content
 
-# Example usage:
 if __name__ == "__main__":
     print("Start")
     filename = 'sample.txt'  # Replace with your file name
