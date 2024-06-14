@@ -1,106 +1,50 @@
-(1/(s15^2 (s - 
-   2 (s15 + s25))^2))32 \[Pi]^3 \[Alpha]^3 (-2 (skv - 2) (snm - 2) 
-\!\(\*SubsuperscriptBox[\(m\), \(e\), \(6\)]\) + (-4 (skv - 2) (snm - 
-         2) 
-\!\(\*SubsuperscriptBox[\(m\), \(\[Tau]\), \(2\)]\) + 32 s35 + 
-      4 s2k s3v - 4 s2v s4k - 4 s3v s4k - 4 s3n s4m + 4 s3m s4n - 
-      16 s35 skv + 2 s3n s4m skv - 2 s3m s4n skv + s3n s3v smk + 
-      s3v s4n smk - s3n s4k smv - s4k s4n smv - s3m s3v snk - 
-      s3v s4m snk - 4 s15 (skv - 2) (snm - 2) - 16 s35 snm - 
-      2 s2k s3v snm + 2 s2v s4k snm + 2 s3v s4k snm + 8 s35 skv snm + 
-      s3m s4k snv + s4k s4m snv - 8 skv t + 4 skv snm t - 8 snm t + 
-      16 t) 
-\!\(\*SubsuperscriptBox[\(m\), \(e\), \(4\)]\) - 
-   4 (s3m (s3v + s4k) + s3n (s3v + s4k) + s3v s4m + s4k s4m + 
-      s3v s4n + s4k s4n - 2 s smk + 4 s15 smk + 4 s25 smk - 2 s smv + 
-      4 s15 smv + 4 s25 smv - 2 s snk + 4 s15 snk + 4 s25 snk - 
-      2 s snv + 4 s15 snv + 4 s25 snv) Subscript[m, \[Tau]] 
-\!\(\*SubsuperscriptBox[\(m\), \(e\), \(3\)]\) + (-2 (skv - 2) (snm - 
-         2) 
-\!\(\*SubsuperscriptBox[\(m\), \(\[Tau]\), \(4\)]\) + (-4 s3m s3n - 
-         8 s4m s3n + 2 s3m skv s3n + 4 s4m skv s3n + s3v smk s3n - 
-         s4k smv s3n + 4 s2k s3v - 4 s2v s4k - 4 s4m s4n + 
-         2 s4m s4n skv + s3v s4n smk - s4k s4n smv - s3m s3v snk - 
-         s3v s4m snk - 4 s15 (skv - 2) (snm - 2) + 
-         8 s35 (skv - 2) (snm - 2) - 2 s2k s3v snm + 2 s2v s4k snm + 
-         s3m s4k snv + s4k s4m snv - 8 skv t + 4 skv snm t - 
-         8 snm t + 16 t) 
-\!\(\*SubsuperscriptBox[\(m\), \(\[Tau]\), \(2\)]\) - 56 s15^2 - 
-      16 s25^2 - 32 s35^2 + 4 skv t^2 - 2 skv snm t^2 + 4 snm t^2 - 
-      8 t^2 - 72 s15 s25 + 8 s15 s2k s2v + 8 s25 s2k s2v + 
-      80 s15 s35 + 32 s25 s35 - 4 s15 s2n s3m - 4 s25 s2n s3m + 
-      4 s15 s3m s3n + 4 s25 s3m s3n + 8 s15 s2k s3v - 8 s2k s35 s3v - 
-      8 s15 s2v s4k - 8 s25 s2v s4k + 8 s2v s35 s4k + 
-      s2n s3m s3v s4k - 4 s15 s2n s4m - 4 s25 s2n s4m - 
-      8 s15 s3n s4m - 4 s25 s3n s4m + 8 s35 s3n s4m + 
-      s2k s3n s3v s4m - s2v s3n s4k s4m + s2n s3v s4k s4m + 
-      8 s15 s3m s4n + 4 s25 s3m s4n - 8 s35 s3m s4n - 
-      s2k s3m s3v s4n + s2v s3m s4k s4n + 4 s15 s4m s4n + 
-      4 s25 s4m s4n + 2 s15 s3v s5k - 2 s15 s4k s5v + 20 s15^2 skv + 
-      16 s35^2 skv + 20 s15 s25 skv - 40 s15 s35 skv - 
-      16 s25 s35 skv + 2 s15 s2n s3m skv + 2 s25 s2n s3m skv + 
-      2 s15 s2n s4m skv + 2 s25 s2n s4m skv + 6 s15 s3n s4m skv + 
-      4 s25 s3n s4m skv - 4 s35 s3n s4m skv - 2 s15 s3m s4n skv + 
-      4 s35 s3m s4n skv + 2 s15 s2v s3n smk + 2 s25 s2v s3n smk + 
-      2 s15 s3n s3v smk - 2 s35 s3n s3v smk + 2 s15 s2v s4n smk + 
-      2 s25 s2v s4n smk - 2 s25 s3v s4n smk - 2 s35 s3v s4n smk + 
-      2 s15 s2k s3n smv + 2 s25 s2k s3n smv - 4 s15 s3n s4k smv - 
-      4 s25 s3n s4k smv + 2 s35 s3n s4k smv + 2 s15 s2k s4n smv + 
-      2 s25 s2k s4n smv - 2 s15 s4k s4n smv - 2 s25 s4k s4n smv + 
-      2 s35 s4k s4n smv - 2 s15 s2v s3m snk - 2 s25 s2v s3m snk - 
-      2 s15 s3m s3v snk + 2 s35 s3m s3v snk - 2 s15 s2v s4m snk - 
-      2 s25 s2v s4m snk - 4 s15 s3v s4m snk - 2 s25 s3v s4m snk + 
-      2 s35 s3v s4m snk - 4 s15^2 smv snk - 4 s25^2 smv snk - 
-      8 s15 s25 smv snk + 16 s15^2 snm + 16 s35^2 snm + 
-      16 s15 s25 snm - 4 s15 s2k s2v snm - 4 s25 s2k s2v snm - 
-      32 s15 s35 snm - 16 s25 s35 snm - 4 s15 s2k s3v snm + 
-      4 s2k s35 s3v snm + 4 s15 s2v s4k snm + 4 s25 s2v s4k snm - 
-      4 s2v s35 s4k snm + 2 s15 s3v s4k snm + 2 s25 s3v s4k snm - 
-      4 s15^2 skv snm + 4 s25^2 skv snm - 8 s35^2 skv snm + 
-      16 s15 s35 skv snm + 8 s25 s35 skv snm - 2 s15 s2k s3m snv - 
-      2 s25 s2k s3m snv - 2 s35 s3m s4k snv - 2 s15 s2k s4m snv - 
-      2 s25 s2k s4m snv + 2 s15 s4k s4m snv + 2 s25 s4k s4m snv - 
-      2 s35 s4k s4m snv - 4 s15^2 smk snv - 4 s25^2 smk snv - 
-      8 s15 s25 smk snv - s^2 (smv snk - skv snm + smk snv + 4) + 
-      32 s15 t + 16 s25 t - 32 s35 t - 4 s2k s3v t + 4 s2v s4k t + 
-      4 s3n s4m t - 4 s3m s4n t - 16 s15 skv t - 8 s25 skv t + 
-      16 s35 skv t - 2 s3n s4m skv t + 2 s3m s4n skv t - 
-      s3n s3v smk t - s3v s4n smk t + s3n s4k smv t + s4k s4n smv t + 
-      s3m s3v snk t + s3v s4m snk t - 16 s15 snm t - 8 s25 snm t + 
-      16 s35 snm t + 2 s2k s3v snm t - 2 s2v s4k snm t + 
-      8 s15 skv snm t + 4 s25 skv snm t - 8 s35 skv snm t - 
-      s3m s4k snv t - s4k s4m snv t + 
-      s (-4 s2k s2v + 4 s4k s2v - s3n smk s2v - s4n smk s2v + 
-         s3m snk s2v + s4m snk s2v + 2 s2k snm s2v - 2 s4k snm s2v - 
-         16 s35 + 2 s2n s3m - 2 s3m s3n + 2 s2n s4m + 2 s3n s4m - 
-         2 s3m s4n - 2 s4m s4n + 8 s35 skv - s2n s3m skv - 
-         s2n s4m skv - 2 s3n s4m skv + s3v s4n smk - s2k s3n smv + 
-         2 s3n s4k smv - s2k s4n smv + s4k s4n smv + s3v s4m snk + 
-         8 s35 snm - s3v s4k snm - 4 s35 skv snm + s2k s3m snv + 
-         s2k s4m snv - s4k s4m snv + 
-         4 s15 (-2 skv + smv snk - 2 snm + smk snv + 8) + 
-         4 s25 (smv snk - skv snm + smk snv + 4) + 4 skv t - 
-         2 skv snm t + 4 snm t - 8 t)) 
-\!\(\*SubsuperscriptBox[\(m\), \(e\), \(2\)]\) - 
-   2 (4 (smk + smv) s15^2 - 
-      2 (2 s2n s2v + s3m s2v - s3n s2v + s4m s2v - s4n s2v + 
-         s2k (2 s2n + s3m - s3n + s4m - s4n) + s3m s5k + s4m s5k + 
-         s3m s5v + s4m s5v + 2 s25 snk + 2 s25 snv) s15 - 
-      2 s25 (2 s2k + 2 s2v - s3v - s4k) (s2n - s3n - s4n) + 
-      s (2 s2n s2v - 2 s3n s2v - 2 s4n s2v - s2n s3v + s3n s3v - 
-         s2n s4k + s3n s4k + 2 s2k (s2n - s3n - s4n) + s3v s4n + 
-         s4k s4n + 2 s15 smk + 2 s15 smv + 2 s15 snk + 
-         2 s15 snv)) Subscript[m, \[Tau]] Subscript[m, e] + 
-   2 s15 (4 skv s15^2 - 8 s15^2 - 16 s25 s15 + 24 s35 s15 + 
-      2 s2k s3v s15 + 2 s2v s5k s15 + 2 s3v s5k s15 + 2 s2k s5v s15 - 
-      2 s4k s5v s15 + 4 s25 skv s15 - 12 s35 skv s15 - 2 skv t s15 + 
-      4 t s15 - 8 s25^2 - 
-      16 s35^2 + (-2 skv s25 + 4 s25 + 8 s35 + s3v s5k - s4k s5v + 
-         2 s15 (skv - 2) - 4 s35 skv) 
-\!\(\*SubsuperscriptBox[\(m\), \(\[Tau]\), \(2\)]\) + 16 s25 s35 + 
-      2 s25 s2k s3v - 2 s2k s35 s3v + 2 s2v s35 s4k - 2 s25 s3v s4k + 
-      2 s25 s2v s5k - 2 s35 s3v s5k + 2 s25 s2k s5v - 2 s25 s4k s5v + 
-      2 s35 s4k s5v + 8 s35^2 skv - 8 s25 s35 skv + 
-      s (-2 skv s15 + 4 s15 + 4 s25 - 4 s35 - s2v s5k - s2k s5v + 
-         s4k s5v + 2 s35 skv) + 4 s25 t - 8 s35 t - s3v s5k t + 
-      s4k s5v t - 2 s25 skv t + 4 s35 skv t))
+-(1/(s^2 (s-4 Subsuperscript[m, e, 2])))32 \[Pi] \[Alpha]^3 Subscript[m, e] Im(X`DiscB(s,Subscript[m, e],Subscript[m, e])) (Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[q2, _]Overscript[sp1, _]) (2 (skv-2) Subsuperscript[m, e, 2]+2 (skv-2) Subsuperscript[m, \[Tau], 2]-s skv+2 s+s2k s3v-s2v s4k-2 skv t+4 t)+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[q2, _]Overscript[sp2, _]) (2 (skv-2) Subsuperscript[m, e, 2]+2 (skv-2) Subsuperscript[m, \[Tau], 2]-s skv+2 s+s2k s3v-s2v s4k-2 skv t+4 t)-2 Subscript[m, e] Subscript[m, \[Tau]] ((s3m+s4m) (Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq1, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq2, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq1, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq2, _]))-s2n (Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq1, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq2, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq1, _])+Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq2, _])))-s3v Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq1, _])-s3v Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq1, _])+s4k Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq2, _])+s4k Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq2, _])-s3v Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq1, _])-s3v Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq1, _])+s4k Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq2, _])+s4k Subsuperscript[m, e, 2] Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq2, _])+\!\(
+\*SubsuperscriptBox[\(m\), \(\[Tau]\), \(2\)]\ \((s4k\ \((
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq2\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq2\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq2\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq2\), \(_\)]\)\)])\) - s3v\ \((
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq1\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq1\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp1\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq1\), \(_\)]\)\)] + 
+\*SuperscriptBox[
+OverscriptBox[\(\[Epsilon]\), \(_\)], \(\(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`p2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`q2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sp2\), \(_\)]\) \(TraditionalForm\`
+\*OverscriptBox[\(TraditionalForm\`sq1\), \(_\)]\)\)])\))\)\)+s s2k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq2, _])+s s2k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq2, _])+s s2v Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq1, _])+s s2v Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq1, _])-s s4k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq2, _])-s s4k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq2, _])+s3v t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq1, _])+s3v t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq1, _])-s4k t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp1, _]Overscript[sq2, _])-s4k t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q1, _]Overscript[sp2, _]Overscript[sq2, _])+s s2k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq2, _])+s s2k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq2, _])+s s2v Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq1, _])+s s2v Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq1, _])-s s4k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq2, _])-s s4k Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq2, _])+s3v t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq1, _])+s3v t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq1, _])-s4k t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp1, _]Overscript[sq2, _])-s4k t Overscript[\[Epsilon], _]^(Overscript[p2, _]Overscript[q2, _]Overscript[sp2, _]Overscript[sq2, _]))
