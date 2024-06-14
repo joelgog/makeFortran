@@ -1,3 +1,11 @@
+import re
+
+def tokenize_expression(expression):
+    # Regular expression to match alphanumeric sequences or specific characters
+    token_pattern = r'[a-zA-Z0-9]+|[+\-*\/()]'
+    tokens = re.findall(token_pattern, expression)
+    return tokens
+
 def read_file_and_store_words(filename):
     words = []  # Initialize an empty list to store words
 
@@ -12,13 +20,14 @@ def read_file_and_store_words(filename):
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
 
-    return words
+    return content
 
 # Example usage:
 if __name__ == "__main__":
     print("Start")
     filename = 'sample.txt'  # Replace with your file name
     word_array = read_file_and_store_words(filename)
+    tokens = tokenize_expression(word_array)
 
     # Print the array of words
-    print("Array of words:", word_array)
+    print("Array of words:", tokens)
