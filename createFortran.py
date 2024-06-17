@@ -26,7 +26,7 @@ def replace_all_patterns(lst):
                    ['Eps', 'q1', 'sp1', 'sp2', 'sq1'], ['Eps', 'q1', 'sp1', 'sp2', 'sq2'], ['Eps', 'q1', 'sp1', 'sq1', 'sq2'], ['Eps', 'q1', 'sp2', 'sq1', 'sq2'], ['Eps', 'q2', 'sp1', 'sp2', 'sq1'], ['Eps', 'q2', 'sp1', 'sp2', 'sq2'], ['Eps', 'q2', 'sp1', 'sq1', 'sq2'], ['Eps', 'q2', 'sp2', 'sq1', 'sq2'], 
                    ['Eps', 'sp1', 'sp2', 'sq1', 'sq2']]
     replacementlist = [['me'], ['mt'], ['**'], [], ['alpha'], ['scalarc0ir6se'], ['discbseIm'], ['asym234n1'], ['asym234n2'], ['asym234n3'], ['asym234n4'], ['asym23n1n2'], ['asym23n1n3'], ['asym23n1n4'], ['asym23n2n3'], ['asym23n2n4'], ['asym23n3n4'], ['asym24n1n2'], ['asym24n1n3'], ['asym24n1n4'], ['asym24n2n3'],
-                      ['asym24n2n4'], ['asym24n3n4'], ['asym2n1n2n3'], ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'], ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'], ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4']]
+                      ['asym24n2n4'], ['asym24n3n4'], ['asym2n1n2n3'], ['asym2n1n2n4'], ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'], ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'], ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4']]
 
     for i in range(len(patternlist)):
         lst = replace_pattern(lst, patternlist[i], replacementlist[i])
