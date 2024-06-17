@@ -22,11 +22,13 @@ def replace_pattern(lst, sublist, replacement):
 def replace_all_patterns(lst):
     patternlist = [['SMP', 'm', 'e',], ['SMP', 'm', 'tau'], ['^'], ['Momentum'], ['Alpha'], ['Re', 'X', 'ScalarC0IR6', 's', 'me', 'me'], ['Im', 'X', 'DiscB', 's', 'me', 'me'], ['Eps', 'p2', 'q1', 'q2', 'sp1'], ['Eps', 'p2', 'q1', 'q2', 'sp2'], ['Eps', 'p2', 'q1', 'q2', 'sq1'], ['Eps', 'p2', 'q1', 'q2', 'sq2'],
                   ['Eps', 'p2', 'q1', 'sp1', 'sp2'], ['Eps', 'p2', 'q1', 'sp1', 'sq1'], ['Eps', 'p2', 'q1', 'sp1', 'sq2'], ['Eps', 'p2', 'q1', 'sp2', 'sq1'], ['Eps', 'p2', 'q1', 'sp2', 'sq2'], ['Eps', 'p2', 'q1', 'sq1', 'sq2'], ['Eps', 'p2', 'q2', 'sp1', 'sp2'], ['Eps', 'p2', 'q2', 'sp1', 'sq1'], 
-                  ['Eps', 'p2', 'q2', 'sp1', 'sq2'], ['Eps', 'p2', 'q2', 'sp2', 'sq1'], ['Eps', 'p2', 'q2', 'sp2', 'sq2'], ['Eps', 'p2', 'q2', 'sq1', 'sq2'], ['Eps', 'p2', 'sp1', 'sp2', 'sq1'], ['Eps', 'p2', 'sp1', 'sp2', 'sq2'], ['Eps', 'p2', 'sp1', 'sq1', 'sq2'], ['Eps', 'p2', 'sp2', 'sq1', 'sq2'], 
+                  ['Eps', 'p2', 'q2', 'sp1', 'sq2'], ['Eps', 'p2', 'q2', 'sp2', 'sq1'], ['Eps', 'p2', 'q2', 'sp2', 'sq2'], ['Eps', 'p2', 'q2', 'sq1', 'sq2'], ['Eps', 'q1', 'q2', 'sp1', 'sp2'], ['Eps', 'q1', 'q2', 'sp1', 'sq1'], 
+                  ['Eps', 'q1', 'q2', 'sp1', 'sq2'], ['Eps', 'q1', 'q2', 'sp2', 'sq1'], ['Eps', 'q1', 'q2', 'sp2', 'sq2'], ['Eps', 'q1', 'q2', 'sq1', 'sq2'], ['Eps', 'p2', 'sp1', 'sp2', 'sq1'], ['Eps', 'p2', 'sp1', 'sp2', 'sq2'], ['Eps', 'p2', 'sp1', 'sq1', 'sq2'], ['Eps', 'p2', 'sp2', 'sq1', 'sq2'], 
                   ['Eps', 'q1', 'sp1', 'sp2', 'sq1'], ['Eps', 'q1', 'sp1', 'sp2', 'sq2'], ['Eps', 'q1', 'sp1', 'sq1', 'sq2'], ['Eps', 'q1', 'sp2', 'sq1', 'sq2'], ['Eps', 'q2', 'sp1', 'sp2', 'sq1'], ['Eps', 'q2', 'sp1', 'sp2', 'sq2'], ['Eps', 'q2', 'sp1', 'sq1', 'sq2'], ['Eps', 'q2', 'sp2', 'sq1', 'sq2'], 
                   ['Eps', 'sp1', 'sp2', 'sq1', 'sq2'], ['Re', 'X', 'DiscB', 's', 'me', 'me'], ['Pi'], ['Epsilon']]
     replacementlist = [['me'], ['mt'], ['**'], [], ['alpha'], ['scalarc0ir6se'], ['discbseIm'], ['asym234n1'], ['asym234n2'], ['asym234n3'], ['asym234n4'], ['asym23n1n2'], ['asym23n1n3'], ['asym23n1n4'], ['asym23n2n3'], ['asym23n2n4'], ['asym23n3n4'], ['asym24n1n2'], ['asym24n1n3'], ['asym24n1n4'], ['asym24n2n3'],
-                      ['asym24n2n4'], ['asym24n3n4'], ['asym2n1n2n3'], ['asym2n1n2n4'], ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'], ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'], ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4'], ['discbse'],
+                      ['asym24n2n4'], ['asym24n3n4'], ['asym34n1n2'], ['asym34n1n3'], ['asym34n1n4'], ['asym34n2n3'],
+                      ['asym34n2n4'], ['asym34n3n4'],['asym2n1n2n3'], ['asym2n1n2n4'], ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'], ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'], ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4'], ['discbse'],
                       ['pi'], ['sing']]
 
     for i in range(len(patternlist)):
