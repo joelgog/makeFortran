@@ -20,8 +20,8 @@ def replace_pattern(lst, sublist, replacement):
 
 #Replaces all patterns defined by patternlist with replacementlist
 def replace_all_patterns(lst):
-    patternlist = [['SMP', 'm', 'e',], ['SMP', 'm', 'tau'], ['^'], ['Momentum']]
-    replacementlist = [['me'],['mt'], ['**'], []]
+    patternlist = [['SMP', 'm', 'e',], ['SMP', 'm', 'tau'], ['^'], ['Momentum'], ['Alpha'],['Re', 'X', 'ScalarC0IR6', 's', 'me', 'me',],['Im', 'X', 'DiscB', 's', 'me', 'me',],['Eps', 'p2', 'q1', 'sp1', 'sq1',]]
+    replacementlist = [['me'],['mt'], ['**'], [], ['alpha'], ['scalarc0ir6se'],['discbseIm'],['asym23n1n3']]
 
     for i in range(len(patternlist)):
         lst = replace_pattern(lst, patternlist[i], replacementlist[i])
@@ -63,9 +63,11 @@ def read_file_and_store_words(filename):
     return content
 
 if __name__ == "__main__":
-    filename = 'sample2.txt'
+    print("Please specify input file name:")
+    textfile = input()
+    filename = './Virtual/' + textfile + '.txt'
     word_array = read_file_and_store_words(filename)
     tokens = tokenize_expression(word_array)
 
     # Print the array of words
-    print("Array of words:", tokens)
+    print("Fortran Code:", ''.join(tokens))
