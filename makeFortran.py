@@ -3,24 +3,30 @@ import re
 #Formats the list of tokens into a string with new lines and '&' at the end of each line
 def format_output(tokens, max_elements_per_line=50):
     lines = []
-    i = 0
+    current_line = []
     
+    i = 0
     while i < len(tokens):
-        # Determine the end index of the current line
-        end_index = min(i + max_elements_per_line, len(tokens))
+        token = tokens[i]
         
-        # Create the current line by joining tokens
-        if tokens[end_index - 1] == '*' or tokens[end_index - 1] == '**':
-            end_index += 1  # Include the next token if it's '*' or '**'
+        # Check if adding this token exceeds the max_elements_per_line
+        if len(' '.join(current_line)) + len(token) > max_elements_per_line:
+            lines.append(' '.join(current_line) + ' &')
+            current_line = []
         
-        line = ''.join(tokens[i:end_index])
+        # Special handling for '**' to ensure it's not split across lines
+        if token == '**' and i > 0 and tokens[i - 1].isdigit():
+            current_line.append('& ' + token)
+        elif token == '*' and len(current_line) == 0:
+            current_line.append(token)
+        else:
+            current_line.append(token)
         
-        # Add '&' at the end of the current line, unless it's the last line
-        if end_index < len(tokens):
-            line += ' &'
-        
-        lines.append(line)
-        i = end_index  # Move to the next chunk of tokens
+        i += 1
+    
+    # Add the last line if there are remaining tokens in current_line
+    if current_line:
+        lines.append(' '.join(current_line))
     
     # Join lines with newline character
     result_string = '\n'.join(lines)
