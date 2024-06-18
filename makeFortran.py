@@ -7,7 +7,7 @@ def format_output(tokens, max_elements_per_line=50):
         line = ''.join(tokens[i:i + max_elements_per_line])
         if i + max_elements_per_line < len(tokens) and (tokens[i] != '*' or tokens[i] != '**'):
             line += ' &'
-        elif i + max_elements_per_line < len(tokens)
+        elif i + max_elements_per_line < len(tokens):
             i += 1
             line += tokens[i] + ' &'
         lines.append(line)
