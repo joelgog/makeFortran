@@ -1,5 +1,13 @@
 import re
 
+#Formats the list of tokens into a string with new lines and '&' at the end of each line
+def format_output(tokens, max_elements_per_line=30):
+    lines = []
+    for i in range(0, len(tokens), max_elements_per_line):
+        line = ''.join(tokens[i:i + max_elements_per_line]) + ' &'
+        lines.append(line)
+    return '\n'.join(lines)
+
 #Replaces all occurrences of the pattern given by sublist with the desired replacement
 def replace_pattern(lst, sublist, replacement):
     n, m = len(lst), len(sublist)
@@ -81,4 +89,4 @@ if __name__ == "__main__":
     tokens = tokenize_expression(word_array)
 
     # Print the array of words
-    print("Fortran Code:", tokens)
+    print("Fortran Code:", format_output(tokens))
