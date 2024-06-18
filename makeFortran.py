@@ -10,18 +10,21 @@ def format_output(tokens, max_elements_per_line=50):
         
         # Check if the current line should be ended
         if len(current_line) >= max_elements_per_line:
-            if i + 1 < len(tokens) and tokens[i + 1] in ('*', '**') and i + 2 < len(tokens) and tokens[i + 2] == '&':
-                continue
-            lines.append(''.join(current_line[:-1]) + ' &')
-            current_line = [current_line[-1]]  # Start a new line with the last element
+            # If the 50th token is '*' or '**', break after that token
+            if i < len(tokens) - 1 and tokens[i + 1] in ('*', '**'):
+                lines.append(''.join(current_line))
+                current_line = []
+            else:
+                lines.append(''.join(current_line) + ' &')
+                current_line = []
     
     # Add the last line
     if current_line:
         lines.append(''.join(current_line))
     
-    # Join lines with newline character and remove any extra whitespace
-    result_string = '\n'.join(lines).replace(' &', '&').rstrip()
-
+    # Join lines with newline character
+    result_string = '\n'.join(lines)
+    
     return result_string
 
 #Replaces all occurrences of the pattern given by sublist with the desired replacement
