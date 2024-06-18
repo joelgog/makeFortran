@@ -1,13 +1,24 @@
 import re
 
 #Formats the list of tokens into a string with new lines and '&' at the end of each line
-def format_output(tokens, max_elements_per_line=30):
+def format_output(tokens, max_elements_per_line=50):
     lines = []
-    for i in range(0, len(tokens), max_elements_per_line):
-        line = ''.join(tokens[i:i + max_elements_per_line])
-        if i + max_elements_per_line < len(tokens):
-            line += ' &'
-        lines.append(line)
+    current_line = []
+    
+    for i, token in enumerate(tokens):
+        current_line.append(token)
+        
+        # Check if the current line should be ended
+        if len(current_line) >= max_elements_per_line:
+            if i + 1 < len(tokens) and tokens[i + 1] in ('*', '**'):
+                continue
+            lines.append(' '.join(current_line[:-1]) + ' &')
+            current_line = [current_line[-1]]  # Start a new line with the last element
+            
+    # Add the last line
+    if current_line:
+        lines.append(' '.join(current_line))
+        
     return '\n'.join(lines)
 
 #Replaces all occurrences of the pattern given by sublist with the desired replacement
