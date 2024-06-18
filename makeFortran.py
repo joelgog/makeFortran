@@ -3,31 +3,15 @@ import re
 #Formats the list of tokens into a string with new lines and '&' at the end of each line
 def format_output(tokens, max_elements_per_line=50):
     lines = []
-    i = 0
-    
-    while i < len(tokens):
-        # Determine the end index of the current line
-        end_index = min(i + max_elements_per_line, len(tokens))
-        
-        # Create the current line by joining tokens
-        line = ''.join(tokens[i:end_index])
-        
-        # Check if the current line ends with '*' or '**'
-        if line.endswith('*') or line.endswith('**'):
-            # Break the line after '*' or '**'
-            lines.append(line)
-            i = end_index  # Move to the next chunk of tokens
-        else:
-            # Add '&' at the end of the current line, unless it's the last line
-            if end_index < len(tokens):
-                line += ' &'
-            lines.append(line)
-            i = end_index  # Move to the next chunk of tokens
-    
-    # Join lines with newline character
-    result_string = '\n'.join(lines)
-    
-    return result_string
+    for i in range(0, len(tokens), max_elements_per_line):
+        line = ''.join(tokens[i:i + max_elements_per_line])
+        if i + max_elements_per_line < len(tokens) and (tokens[i + max_elements_per_line] != '*' or tokens[i + max_elements_per_line] != '**'):
+            line += ' &'
+        elif i + max_elements_per_line < len(tokens):
+            i += i + max_elements_per_line + 1
+            line += tokens[i] + ' &'
+        lines.append(line)
+    return '\n'.join(lines)
 
 #Replaces all occurrences of the pattern given by sublist with the desired replacement
 def replace_pattern(lst, sublist, replacement):
