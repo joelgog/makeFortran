@@ -12,14 +12,17 @@ def format_output(tokens, max_elements_per_line=50):
         if len(current_line) >= max_elements_per_line:
             if i + 1 < len(tokens) and tokens[i + 1] in ('*', '**'):
                 continue
-            lines.append(' '.join(current_line[:-1]) + ' &')
+            lines.append(''.join(current_line[:-1]) + ' &')
             current_line = [current_line[-1]]  # Start a new line with the last element
-            
+    
     # Add the last line
     if current_line:
-        lines.append(' '.join(current_line))
-        
-    return '\n'.join(lines)
+        lines.append(''.join(current_line))
+    
+    # Join lines with newline character and remove any extra whitespace
+    result_string = '\n'.join(lines).replace(' &', '&').rstrip()
+
+    return result_string
 
 #Replaces all occurrences of the pattern given by sublist with the desired replacement
 def replace_pattern(lst, sublist, replacement):
