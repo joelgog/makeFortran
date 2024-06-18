@@ -9,25 +9,12 @@ def format_output(tokens, max_elements_per_line=50):
         # Determine the end index of the current line
         end_index = min(i + max_elements_per_line, len(tokens))
         
-        # Check if the last token in the line chunk is '*' or '**'
+        # Adjust end_index if the last token in the line chunk is '*' or '**'
         if tokens[end_index - 1] == '*' or tokens[end_index - 1] == '**':
-            # Check if adding another token would exceed max_elements_per_line
-            if end_index < len(tokens) and len(''.join(tokens[i:end_index + 1])) <= max_elements_per_line:
-                end_index += 1
+            end_index += 1
         
         # Create the current line by joining tokens
         line = ''.join(tokens[i:end_index])
-        
-        # Check if we need to add '&' at the end of the current line
-        if end_index < len(tokens):
-            # Check the first token of the next line
-            next_line_start_token = tokens[end_index]
-            
-            # Avoid breaking lines just before or after '* ' or '**'
-            if next_line_start_token == '*' or next_line_start_token == '**':
-                # Move the end_index to the beginning of the next token
-                end_index += 1
-                line = ''.join(tokens[i:end_index])
         
         # Add '&' at the end of the current line, unless it's the last line
         if end_index < len(tokens):
