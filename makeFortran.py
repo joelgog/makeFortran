@@ -4,7 +4,9 @@ import re
 def format_output(tokens, max_elements_per_line=30):
     lines = []
     for i in range(0, len(tokens), max_elements_per_line):
-        line = ''.join(tokens[i:i + max_elements_per_line]) + ' &'
+        line = ''.join(tokens[i:i + max_elements_per_line])
+        if i + max_elements_per_line < len(tokens):
+            line += ' &'
         lines.append(line)
     return '\n'.join(lines)
 
