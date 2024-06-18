@@ -10,8 +10,7 @@ def format_output(tokens, max_elements_per_line=50):
         
         # Check if the current line should be ended
         if len(current_line) >= max_elements_per_line:
-            # If the 50th token is '*' or '**', break after that token
-            if i < len(tokens) - 1 and tokens[i + 1] in ('*', '**'):
+            if i < len(tokens) - 1 and tokens[i-1] in ('*', '**'):
                 lines.append(''.join(current_line))
                 current_line = []
             else:
