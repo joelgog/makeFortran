@@ -11,7 +11,9 @@ def format_output(tokens, max_elements_per_line=50):
         
         # Check if the last token in the line chunk is '*' or '**'
         if tokens[end_index - 1] == '*' or tokens[end_index - 1] == '**':
-            end_index += 1
+            # Check if adding another token would exceed max_elements_per_line
+            if end_index < len(tokens) and len(''.join(tokens[i:end_index + 1])) <= max_elements_per_line:
+                end_index += 1
         
         # Create the current line by joining tokens
         line = ''.join(tokens[i:end_index])
