@@ -4,12 +4,13 @@ import re
 def format_output(tokens, max_elements_per_line=50):
     lines = []
     for i in range(0, len(tokens), max_elements_per_line):
-        line = ''.join(tokens[i:i + max_elements_per_line])
-        if i + max_elements_per_line < len(tokens) and (tokens[i + max_elements_per_line] != '*' or tokens[i + max_elements_per_line] != '**'):
+        if tokens[i:i + max_elements_per_line] != '*' and tokens[i:i + max_elements_per_line] != '**':
+            line = ''.join(tokens[i:i + max_elements_per_line])
+        else:
+            line = ''.join(tokens[i:i + max_elements_per_line + 1])
+            i += 1
+        if i + max_elements_per_line < len(tokens):
             line += ' &'
-        elif i + max_elements_per_line < len(tokens):
-            i += i + max_elements_per_line + 1
-            line += tokens[i] + ' &'
         lines.append(line)
     return '\n'.join(lines)
 
