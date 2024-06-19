@@ -3706,27 +3706,27 @@ s4k*s4n*smv+s2n*(-4*s3m*skv+5*s2v*smk-s3v*smk+s2k*smv+2*s4k*smv)+s3n*(-24*s4m*sk
 **4-2*tt*mt**2+mt**4-2*me**2*(tt+mt**2))**2)
 
 // Output from ./virtual/ttEps.txt
-(8*pi*alpha**3*(ss-4*mt**2+ReXDiscBssmtmt*(ss-2*mt**2))*(-4*ss**2-4*ss*s2k*s2v &
-+4*ss*s2v*s4k+s2n*s2v*s3m*s4k-s2v*s3m*s3n*s4k+s2n*s3m*s3v*s4k+2*ss*s2n*s4m+2*ss*s3n*s4m+s2k &
-*s2n*s3v*s4m-s2v*s3n*s4k*s4m+s2n*s3v*s4k*s4m-s2k*s3m*s3v*s4n-2*ss*s4m*s4n-s2k*s3v*s4m*s4n-ss*s2n &
-*s3m*skv-2*ss*s2n*s4m*skv-ss*s3n*s4m*skv+ss*s4m*s4n*skv-ss*s2n*s2v*smk+ss*s3v*s4n*smk-ss*s2k &
-*s2n*smv+ss*s2n*s4k*smv+ss*s3n*s4k*smv+ss*s2v*s3m*snk+ss*s2v*s4m*snk+ss*s3v*s4m*snk-ss**2*smv &
-*snk+2*ss*s2k*s2v*snm-2*ss*s2v*s4k*snm-ss*s3v*s4k*snm+ss**2*skv*snm+ss*s2k*s3m*snv+ss*s2k &
-*s4m*snv-ss*s4k*s4m*snv-ss**2*smk*snv-8*ss*tt-2*s2n*s3m*tt+2*s3m*s3n*tt-4*s2k*s3v*tt &
-+4*s2v*s4k*tt+2*s2n*s4m*tt+2*s3n*s4m*tt-2*s3m*s4n*tt-2*s4m*s4n*tt+4*ss*skv*tt+s2n &
-*s3m*skv*tt-s3m*s3n*skv*tt-s2n*s4m*skv*tt-s3n*s4m*skv*tt+s3m*s4n*skv*tt+s4m*s4n*skv*tt-s2n*s3v &
-*smk*tt+s2n*s4k*smv*tt+s3m*s3v*snk*tt+s3v*s4m*snk*tt+4*ss*snm*tt+2*s2k*s3v*snm*tt-2*s2v &
-*s4k*snm*tt-2*ss*skv*snm*tt-s3m*s4k*snv*tt-s4k*s4m*snv*tt-8*tt**2+4*skv*tt**2+4*snm &
-*tt**2-2*skv*snm*tt**2-2*(-2+skv)*(-2+snm)*me**4-4*(s3m*(s3v+s4k)+s3n*(s3v &
-+s4k)+s3v*s4m+s4k*s4m+s3v*s4n+s4k*s4n-2*ss*smk-2*ss*smv-2*ss*snk-2*ss*snv)*me*mt+( &
-4*s2k*s3v-4*s2v*s4k-2*s3n*s4m+2*s4m*s4n+s3n*s4m*skv-s4m*s4n*skv+s2n*(s3m*(-2+skv)+3*s4m &
-*(-2+skv)+s3v*smk-s4k*smv)-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k*snm+s4k*s4m*snv+s3m*(s3n*( &
--2+skv)-s4n*(-2+skv)-s3v*snk+s4k*snv)+16*tt-8*skv*tt-8*snm*tt+4*skv*snm*tt)*mt &
-**2-2*(-2+skv)*(-2+snm)*mt**4+me**2*(-2*s3m*s3n+4*s2k*s3v-4*s2v*s4k-4*s3v &
-*s4k-2*s3n*s4m+2*s3m*s4n+2*s4m*s4n+s3m*s3n*skv+s3n*s4m*skv-s3m*s4n*skv-s4m*s4n*skv+s2n*(-( &
-s3m*(-2+skv))+s4m*(-2+skv)+s3v*smk-s4k*smv)-s3m*s3v*snk-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v &
-*s4k*snm+2*s3v*s4k*snm+s3m*s4k*snv+s4k*s4m*snv+16*tt-8*skv*tt-8*snm*tt+4*skv*snm*tt-4 &
-*(-2+skv)*(-2+snm)*mt**2)))/(sing*ss**2*(ss-4*mt**2))
+(8*pi*alpha**3*(ss-4*mt**2+discbst*(ss-2*mt**2))*(-4*ss**2-4*ss*s2k*s2v+4*ss &
+*s2v*s4k+s2n*s2v*s3m*s4k-s2v*s3m*s3n*s4k+s2n*s3m*s3v*s4k+2*ss*s2n*s4m+2*ss*s3n*s4m+s2k*s2n*s3v &
+*s4m-s2v*s3n*s4k*s4m+s2n*s3v*s4k*s4m-s2k*s3m*s3v*s4n-2*ss*s4m*s4n-s2k*s3v*s4m*s4n-ss*s2n*s3m*skv &
+-2*ss*s2n*s4m*skv-ss*s3n*s4m*skv+ss*s4m*s4n*skv-ss*s2n*s2v*smk+ss*s3v*s4n*smk-ss*s2k*s2n*smv &
++ss*s2n*s4k*smv+ss*s3n*s4k*smv+ss*s2v*s3m*snk+ss*s2v*s4m*snk+ss*s3v*s4m*snk-ss**2*smv*snk+2 &
+*ss*s2k*s2v*snm-2*ss*s2v*s4k*snm-ss*s3v*s4k*snm+ss**2*skv*snm+ss*s2k*s3m*snv+ss*s2k*s4m*snv &
+-ss*s4k*s4m*snv-ss**2*smk*snv-8*ss*tt-2*s2n*s3m*tt+2*s3m*s3n*tt-4*s2k*s3v*tt+4*s2v &
+*s4k*tt+2*s2n*s4m*tt+2*s3n*s4m*tt-2*s3m*s4n*tt-2*s4m*s4n*tt+4*ss*skv*tt+s2n*s3m*skv &
+*tt-s3m*s3n*skv*tt-s2n*s4m*skv*tt-s3n*s4m*skv*tt+s3m*s4n*skv*tt+s4m*s4n*skv*tt-s2n*s3v*smk*tt &
++s2n*s4k*smv*tt+s3m*s3v*snk*tt+s3v*s4m*snk*tt+4*ss*snm*tt+2*s2k*s3v*snm*tt-2*s2v*s4k*snm &
+*tt-2*ss*skv*snm*tt-s3m*s4k*snv*tt-s4k*s4m*snv*tt-8*tt**2+4*skv*tt**2+4*snm*tt**2 &
+-2*skv*snm*tt**2-2*(-2+skv)*(-2+snm)*me**4-4*(s3m*(s3v+s4k)+s3n*(s3v+s4k)+ &
+s3v*s4m+s4k*s4m+s3v*s4n+s4k*s4n-2*ss*smk-2*ss*smv-2*ss*snk-2*ss*snv)*me*mt+(4*s2k*s3v &
+-4*s2v*s4k-2*s3n*s4m+2*s4m*s4n+s3n*s4m*skv-s4m*s4n*skv+s2n*(s3m*(-2+skv)+3*s4m*(-2 &
++skv)+s3v*smk-s4k*smv)-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k*snm+s4k*s4m*snv+s3m*(s3n*(-2+ &
+skv)-s4n*(-2+skv)-s3v*snk+s4k*snv)+16*tt-8*skv*tt-8*snm*tt+4*skv*snm*tt)*mt**2- &
+2*(-2+skv)*(-2+snm)*mt**4+me**2*(-2*s3m*s3n+4*s2k*s3v-4*s2v*s4k-4*s3v*s4k- &
+2*s3n*s4m+2*s3m*s4n+2*s4m*s4n+s3m*s3n*skv+s3n*s4m*skv-s3m*s4n*skv-s4m*s4n*skv+s2n*(-(s3m*( &
+-2+skv))+s4m*(-2+skv)+s3v*smk-s4k*smv)-s3m*s3v*snk-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k &
+*snm+2*s3v*s4k*snm+s3m*s4k*snv+s4k*s4m*snv+16*tt-8*skv*tt-8*snm*tt+4*skv*snm*tt-4*( &
+-2+skv)*(-2+snm)*mt**2)))/(sing*ss**2*(ss-4*mt**2))
 
 // Output from ./virtual/em2DiscB.txt
 (2*pi*alpha**3*discbuem*(-8*pi*ss*me**4 - 2*me**2(mt**2+s+t) + (s+t-mt**2)**2*mt*(ss+tt-2*me**2-2*mt**2)*(me**4+(ss+tt &
@@ -8297,18 +8297,18 @@ s3m+s4m)*snk+11*s4k*(-2+snm))+18*s3v*s4k*snm+s3m*s4k*snv+13*s4k*s4m*snv-2*s2k*(-
 *mt+2*((s3m+s4m)*(asym34n1n3+asym34n1n4)-s2n*(asym34n2n3+asym34n2n4))*mt**2+asym234n3*(s2n*(s3m-s4m)-(s3m+s4m)*(s3n &
 -s4n)-2*ss*(-2+snm)+8*tt-4*snm*tt+4*(-2+snm)*me**2+4*(-2+snm)*mt**2 &
 )+asym234n4*(s2n*(s3m-s4m)-(s3m+s4m)*(s3n-s4n)-2*ss*(-2+snm)+8*tt-4*snm*tt+4*(- &
-2+snm)*me**2+4*(-2+snm)*mt**2))+ReXDiscBssmtmt*(3*ss*(-((s3m+s4m)*(s2v*s3n*s4k &
-+s2k*s3v*s4n))-ss**2*(4+smv*snk-skv*snm+smk*snv)+(-(s4m*(s3n-s4n)*(-2+skv))+s3v*s4m &
-*snk+2*s2k*s3v*(-2+snm)+s3m*(-(s3n*(-2+skv))+s4n*(-2+skv)+s3v*snk-s4k*snv)-s4k &
-*(2*s2v*(-2+snm)+s4m*snv))*tt-2*(-2+skv)*(-2+snm)*tt**2+s2n*(s2v*s3m*s4k+ &
-s3m*s3v*s4k+s3v*(s2k+s4k)*s4m+(s3m*(-2+skv)-s4m*(-2+skv)-s3v*smk+s4k*smv)*tt)+ss*( &
-2*s2n*s4m-s2n*(s3m+2*s4m)*skv+s3v*s4n*smk+(s2n+s3n)*s4k*smv+s3v*s4m*snk+s2v*(-(s2n*smk)+ &
-(s3m+s4m)*snk-2*s4k*(-2+snm))-s3v*s4k*snm-s4k*s4m*snv+s2k*(-(s2n*smv)+2*s2v*(-2+ &
-snm)+(s3m+s4m)*snv)-(-2+skv)*(s3n*s4m-s4m*s4n-4*tt)-2*(-2+skv)*snm*tt))+(s4k &
-*(-(s2n*(10*s3v*(s3m+s4m)+s2v*(11*s3m+s4m)))+s2v*(s3m+s4m)*(11*s3n+s4n))+12*ss**2 &
-*(4+smv*snk-skv*snm+smk*snv)+2*(s2n*(-4*s3m*(-2+skv)+4*s4m*(-2+skv)+5*s3v*smk &
--5*s4k*smv)+10*s2v*s4k*(-2+snm)+(s3m+s4m)*(4*s3n*(-2+skv)-4*s4n*(-2+skv)- &
-5*s3v*snk+5*s4k*snv))*tt+16*(-2+skv)*(-2+snm)*tt**2+s2k*s3v*(-(s2n*(s3m+11*s4m &
+2+snm)*me**2+4*(-2+snm)*mt**2))+discbst*(3*ss*(-((s3m+s4m)*(s2v*s3n*s4k+s2k*s3v &
+*s4n))-ss**2*(4+smv*snk-skv*snm+smk*snv)+(-(s4m*(s3n-s4n)*(-2+skv))+s3v*s4m*snk+ &
+2*s2k*s3v*(-2+snm)+s3m*(-(s3n*(-2+skv))+s4n*(-2+skv)+s3v*snk-s4k*snv)-s4k*(2 &
+*s2v*(-2+snm)+s4m*snv))*tt-2*(-2+skv)*(-2+snm)*tt**2+s2n*(s2v*s3m*s4k+s3m*s3v &
+*s4k+s3v*(s2k+s4k)*s4m+(s3m*(-2+skv)-s4m*(-2+skv)-s3v*smk+s4k*smv)*tt)+ss*(2*s2n &
+*s4m-s2n*(s3m+2*s4m)*skv+s3v*s4n*smk+(s2n+s3n)*s4k*smv+s3v*s4m*snk+s2v*(-(s2n*smk)+(s3m+ &
+s4m)*snk-2*s4k*(-2+snm))-s3v*s4k*snm-s4k*s4m*snv+s2k*(-(s2n*smv)+2*s2v*(-2+snm)+ &
+(s3m+s4m)*snv)-(-2+skv)*(s3n*s4m-s4m*s4n-4*tt)-2*(-2+skv)*snm*tt))+(s4k*(- &
+(s2n*(10*s3v*(s3m+s4m)+s2v*(11*s3m+s4m)))+s2v*(s3m+s4m)*(11*s3n+s4n))+12*ss**2*( &
+4+smv*snk-skv*snm+smk*snv)+2*(s2n*(-4*s3m*(-2+skv)+4*s4m*(-2+skv)+5*s3v*smk- &
+5*s4k*smv)+10*s2v*s4k*(-2+snm)+(s3m+s4m)*(4*s3n*(-2+skv)-4*s4n*(-2+skv)-5 &
+*s3v*snk+5*s4k*snv))*tt+16*(-2+skv)*(-2+snm)*tt**2+s2k*s3v*(-(s2n*(s3m+11*s4m &
 ))+(s3m+s4m)*(s3n+11*s4n)-20*(-2+snm)*tt)-ss*(-4*s3v*s4k+s2n*(s4m*(34-29*skv &
 )+s3m*(6-15*skv))-2*s2n*s3v*smk+s3n*s3v*smk+11*s3v*s4n*smk+14*s2n*s4k*smv+11*s3n*s4k*smv &
 +s4k*s4n*smv+3*s3m*s3v*snk+13*s3v*s4m*snk+4*s2v*(-3*s2n*smk+3*(s3m+s4m)*snk-7*s4k*( &
@@ -16393,8 +16393,7 @@ s2n*smv)+6*s3n*smv+4*s4n*smv+6*s2v*(-2+snm)-2*s3v*snm+3*s3m*snv+5*s4m*snv)+64*tt
 **2+mt**4-2*me**2*(tt+mt**2))**2)
 
 // Output from ./virtual/ttLog.txt
-(-2*alpha*LogScaleMu/mt*(ss-4*mt**2+ReXDiscBssmtmt*(ss-2*mt**2)))/(pi*(ss-4*mt**2 &
-))
+(-2*alpha*LogScaleMu/mt*(ss-4*mt**2+discbst*(ss-2*mt**2)))/(pi*(ss-4*mt**2))
 
 // Output from ./virtual/em2C0.txt
 (pi*alpha**3*((scalarc0se*(128*(-2+skv)*(-2+snm)*me**14+32*(2*s2v*s3n+4*s3m*s3v+3*s3n &
