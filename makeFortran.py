@@ -1,4 +1,5 @@
 import re
+import os
 
 #Takes all input files and writes all output strings into a single txt file
 def process_directories(dir1, dir2, output_file):
