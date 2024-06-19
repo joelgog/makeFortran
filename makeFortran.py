@@ -108,9 +108,9 @@ if __name__ == "__main__":
     print("Please select path:")
     path = input()
     if path == 'v': 
-        pathname = './Virtual'
+        pathname = './Virtual/'
     elif path == 'r':
-        pathname = './Real'
+        pathname = './Real/'
         
     print("Please specify input file name:")
     filename = input()
