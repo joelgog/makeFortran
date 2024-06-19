@@ -1,5 +1,26 @@
 import re
 
+#Takes all input files and writes all output strings into a single txt file
+def process_directories(dir1, dir2, output_file):
+    all_files = []
+    
+    # Gather all text files from both directories
+    for directory in [dir1, dir2]:
+        for root, _, files in os.walk(directory):
+            for file in files:
+                if file.endswith('.txt'):
+                    all_files.append(os.path.join(root, file))
+    
+    with open(output_file, 'w') as outfile:
+        for filepath in all_files:
+            # Process each file
+            tokens = tokenize_expression(read_file_and_store_words(filepath))
+            formatted_string = format_output(tokens)
+            
+            # Write to the output file with comments
+            outfile.write(f"// Output from {filepath}\n")
+            outfile.write(formatted_string + "\n\n")
+
 #Formats the list of tokens into a string with new lines and '&' at the end of each line
 def format_output(tokens, max_elements_per_line=50):
     lines = []
@@ -103,14 +124,21 @@ def read_file_and_store_words(filename):
         print(f"Error: The file '{filename}' was not found.")
 
     return content
+    
+if __name__ == "__main__":
+    process_directories('./virtual/', './real/', 'fortran')
+    print("done")
 
+
+
+""" old main
 if __name__ == "__main__":
     print("Please select path:")
     path = input()
     if path == 'v': 
-        pathname = './Virtual/'
+        pathname = './virtual/'
     elif path == 'r':
-        pathname = './Real/'
+        pathname = './real/'
         
     print("Please specify input file name:")
     filename = input()
@@ -120,3 +148,4 @@ if __name__ == "__main__":
 
     # Print the array of words
     print("Fortran Code:", format_output(tokens))
+"""
