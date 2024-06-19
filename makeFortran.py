@@ -105,9 +105,16 @@ def read_file_and_store_words(filename):
     return content
 
 if __name__ == "__main__":
+    print("Please select path:")
+    path = input()
+    if path == 'v': 
+        pathname = './Virtual'
+    elif path == 'r':
+        pathname = './Real'
+        
     print("Please specify input file name:")
-    textfile = input()
-    filename = './Virtual/' + textfile + '.txt'
+    filename = input()
+    filename = pathname + filename + '.txt'
     word_array = read_file_and_store_words(filename)
     tokens = tokenize_expression(word_array)
 
