@@ -9600,22 +9600,22 @@ s4k)-2*s2k*(s2n-2*s4n)-4*s2v*s4n+4*s3v*s4n-5*s4k*s4n-4*snv*tt)+ss*(-(s2n*(s2v- &
 +mt**4-2*me**2*(tt+mt**2))**2)
 
 // Output from ./virtual/ttC0IR6.txt
-(8*pi*alpha**3*ReXScalarC0IR6ssmtmt*(ss-2*mt**2)*(-((s3m+s4m)*(s2v*s3n*s4k+s2k*s3v*s4n))- &
-ss**2*(4+smv*snk-skv*snm+smk*snv)+(-(s4m*(s3n-s4n)*(-2+skv))+s3v*s4m*snk+2*s2k*s3v &
-*(-2+snm)+s3m*(-(s3n*(-2+skv))+s4n*(-2+skv)+s3v*snk-s4k*snv)-s4k*(2*s2v*(- &
-2+snm)+s4m*snv))*tt-2*(-2+skv)*(-2+snm)*tt**2+s2n*(s2v*s3m*s4k+s3m*s3v*s4k+s3v*( &
-s2k+s4k)*s4m+(2*s4m+s3m*(-2+skv)-s4m*skv-s3v*smk+s4k*smv)*tt)+ss*(2*s2n*s4m-s2n*(s3m &
-+2*s4m)*skv+s3v*s4n*smk+(s2n+s3n)*s4k*smv+s3v*s4m*snk+s2v*(-(s2n*smk)+(s3m+s4m)*snk-2*s4k &
-*(-2+snm))-s3v*s4k*snm-s4k*s4m*snv+s2k*(-(s2n*smv)+2*s2v*(-2+snm)+(s3m+s4m)*snv) &
--(-2+skv)*(s3n*s4m-s4m*s4n-4*tt)-2*(-2+skv)*snm*tt)-2*(-2+skv)*(-2+snm &
-)*me**4-4*((s3v+s4k)*(s3m+s3n+s4m+s4n)-2*ss*(smk+smv+snk+snv))*me*mt+me**2*(4 &
-*s2k*s3v-4*s2v*s4k-4*s3v*s4k+s2n*(-(s3m*(-2+skv))+s4m*(-2+skv)+s3v*smk-s4k*smv)- &
-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k*snm+2*s3v*s4k*snm+s4k*s4m*snv+s3m*(s3n*(-2+skv)-s4n*( &
--2+skv)-s3v*snk+s4k*snv)+(-2+skv)*(s3n*s4m-s4m*s4n-8*tt)+4*(-2+skv)*snm*tt-4 &
-*(-2+skv)*(-2+snm)*mt**2)+mt**2*(4*s2k*s3v-4*s2v*s4k+s2n*(s3m*(-2+skv)+3 &
-*s4m*(-2+skv)+s3v*smk-s4k*smv)-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k*snm+s4k*s4m*snv+s3m*( &
-s3n*(-2+skv)-s4n*(-2+skv)-s3v*snk+s4k*snv)+(-2+skv)*(s3n*s4m-s4m*s4n-8*tt)+4*( &
--2+skv)*snm*tt-2*(-2+skv)*(-2+snm)*mt**2)))/ss**2
+(8*pi*alpha**3*scalarc0ir6st*(ss-2*mt**2)*(-((s3m+s4m)*(s2v*s3n*s4k+s2k*s3v*s4n))-ss**2*( &
+4+smv*snk-skv*snm+smk*snv)+(-(s4m*(s3n-s4n)*(-2+skv))+s3v*s4m*snk+2*s2k*s3v*(-2+ &
+snm)+s3m*(-(s3n*(-2+skv))+s4n*(-2+skv)+s3v*snk-s4k*snv)-s4k*(2*s2v*(-2+snm)+ &
+s4m*snv))*tt-2*(-2+skv)*(-2+snm)*tt**2+s2n*(s2v*s3m*s4k+s3m*s3v*s4k+s3v*(s2k+s4k) &
+*s4m+(2*s4m+s3m*(-2+skv)-s4m*skv-s3v*smk+s4k*smv)*tt)+ss*(2*s2n*s4m-s2n*(s3m+2*s4m &
+)*skv+s3v*s4n*smk+(s2n+s3n)*s4k*smv+s3v*s4m*snk+s2v*(-(s2n*smk)+(s3m+s4m)*snk-2*s4k*(- &
+2+snm))-s3v*s4k*snm-s4k*s4m*snv+s2k*(-(s2n*smv)+2*s2v*(-2+snm)+(s3m+s4m)*snv)-(- &
+2+skv)*(s3n*s4m-s4m*s4n-4*tt)-2*(-2+skv)*snm*tt)-2*(-2+skv)*(-2+snm)*me &
+**4-4*((s3v+s4k)*(s3m+s3n+s4m+s4n)-2*ss*(smk+smv+snk+snv))*me*mt+me**2*(4*s2k*s3v &
+-4*s2v*s4k-4*s3v*s4k+s2n*(-(s3m*(-2+skv))+s4m*(-2+skv)+s3v*smk-s4k*smv)-s3v*s4m*snk &
+-2*s2k*s3v*snm+2*s2v*s4k*snm+2*s3v*s4k*snm+s4k*s4m*snv+s3m*(s3n*(-2+skv)-s4n*(-2+skv &
+)-s3v*snk+s4k*snv)+(-2+skv)*(s3n*s4m-s4m*s4n-8*tt)+4*(-2+skv)*snm*tt-4*(-2 &
++skv)*(-2+snm)*mt**2)+mt**2*(4*s2k*s3v-4*s2v*s4k+s2n*(s3m*(-2+skv)+3*s4m*( &
+-2+skv)+s3v*smk-s4k*smv)-s3v*s4m*snk-2*s2k*s3v*snm+2*s2v*s4k*snm+s4k*s4m*snv+s3m*(s3n*(- &
+2+skv)-s4n*(-2+skv)-s3v*snk+s4k*snv)+(-2+skv)*(s3n*s4m-s4m*s4n-8*tt)+4*(-2+ &
+skv)*snm*tt-2*(-2+skv)*(-2+snm)*mt**2)))/ss**2
 
 // Output from ./virtual/em1C0.txt
 (pi*alpha**3*((scalarc0se*(32*(2*s2k+2*s2v+3*s3v-s4k)*(s2n-s3n-s4n)*me**11*mt-8*me**12*( &
