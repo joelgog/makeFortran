@@ -6721,8 +6721,7 @@ s4k*s4n*smv+s2n*(-4*s3m*skv+5*s2v*smk-s3v*smk+s2k*smv+2*s4k*smv)+s3n*(-24*s4m*sk
 **4-2*tt*mt**2+mt**4-2*me**2*(tt+mt**2))**2)
 
 // Output from ./virtual/eeLog.txt
-(-alpha*LogScaleMu**2/me**2*(ss-4*me**2+discbse*(ss-2*me**2)))/(pi*(ss-4*me**2) &
-)
+(-alpha*logem*(ss-4*me**2+discbse*(ss-2*me**2)))/(pi*(ss-4*me**2))
 
 // Output from ./virtual/em1Eps.txt
 (4*pi*tt*alpha**3*discbtet*(ss**2*(-((s2k-s4k)*(s2n-s3n-s4n)*smv)-4*(4+smv*snk-skv*snm &
@@ -16394,8 +16393,7 @@ s2n*smv)+6*s3n*smv+4*s4n*smv+6*s2v*(-2+snm)-2*s3v*snm+3*s3m*snv+5*s4m*snv)+64*tt
 **2+mt**4-2*me**2*(tt+mt**2))**2)
 
 // Output from ./virtual/ttLog.txt
-(-alpha*LogScaleMu**2/mt**2*(ss-4*mt**2+discbst*(ss-2*mt**2)))/(pi*(ss-4*mt**2) &
-)
+(-alpha*logtm*(ss-4*mt**2+discbst*(ss-2*mt**2)))/(pi*(ss-4*mt**2))
 
 // Output from ./virtual/em2C0.txt
 (pi*alpha**3*((scalarc0se*(128*(-2+skv)*(-2+snm)*me**14+32*(2*s2v*s3n+4*s3m*s3v+3*s3n &
