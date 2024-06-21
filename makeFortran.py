@@ -15,7 +15,8 @@ def process_directories(dir1, dir2, output_file):
     with open(output_file, 'w') as outfile:
         for filepath in all_files:
             # Process each file
-            tokens = tokenize_expression(read_file_and_store_words(filepath))
+            tokens = tokenize_expression(read_file_and_store_words('./virtual/eeLog.txt'))
+            print(tokens)
             formatted_string = format_output(tokens)
             
             # Write to the output file with comments
