@@ -1,1 +1,1 @@
-(-\[Alpha]*Log[ScaleMu^2/SMP["m_e"]^2]*(s - 4*SMP["m_e"]^2 + Re[X`DiscB[s, SMP["m_e"], SMP["m_e"]]]*(s - 2*SMP["m_e"]^2)))/(Pi*(s - 4*SMP["m_e"]^2))
+(-2*\[Alpha]*Log[ScaleMu/SMP["m_e"]]*(s - 4*SMP["m_e"]^2 + Re[X`DiscB[s, SMP["m_e"], SMP["m_e"]]]*(s - 2*SMP["m_e"]^2)))/(Pi*(s - 4*SMP["m_e"]^2))
