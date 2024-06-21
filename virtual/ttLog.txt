@@ -1,1 +1,0 @@
-(-2*\[Alpha]*Log[ScaleMu/SMP["m_tau"]]*(s - 4*SMP["m_tau"]^2 + Re[X`DiscB[s, SMP["m_tau"], SMP["m_tau"]]]*(s - 2*SMP["m_tau"]^2)))/(Pi*(s - 4*SMP["m_tau"]^2))
