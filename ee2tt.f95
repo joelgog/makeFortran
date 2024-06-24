@@ -19,8 +19,8 @@
     real(kind=prec) :: snm, snv, snk, skv, smv, smk
 
     ss = sq(p1+p2); tt = sq(p1-q1)
-    me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    me2 = sq(p1); mt2 = sq(q1)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2)
@@ -93,8 +93,8 @@
     real(kind=prec) :: asym24n2n3, asym23n2n4, asym24n2n4, asym23n1n4, asym24n1n4
 
     ss = sq(p1+p2); tt = sq(p1-q1)
-    me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    me2 = sq(p1); mt2 = sq(q1)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2)
@@ -244,8 +244,8 @@
     real(kind=prec) :: asym234n3, asym234n4, asym34n2n3, asym34n2n4, asym34n1n3, asym34n1n4
     
     ss = sq(p1+p2); tt = sq(p1-q1)
-    me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    me2 = sq(p1); mt2 = sq(q1)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2)
@@ -393,7 +393,7 @@
 
     ss = sq(p1+p2); tt = sq(p1-q1)
     me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2)
@@ -8720,8 +8720,8 @@
     real(kind=prce) :: asym2n1n3n4, asym2n2n3n4, asym3n1n2n3, asym3n1n2n4, asym3n1n3n4, asym3n2n3n4, asym4n1n2n3, asym4n1n2n4, asym4n1n3n4, asym4n2n3n4, asymn1n2n3n4
 
     ss = sq(p1+p2); tt = sq(p1-q1)
-    me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    me2 = sq(p1); mt2 = sq(q1)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2)
@@ -18088,9 +18088,9 @@
     real(kind=prec) :: s2n, s3n, s4n, s5n, s1m, s3m, s4m, s5m, s1k, s2k, s4k, s5k, s1v, s2v, s3v, s5v
     real(kind=prec) :: snm, snv, snk, skv, smv, smk
 
-    ss = sq(p1+p2); tt = sq(p1-q1); s15 = s(p1,q3); s25 = s(p2,q3); s35(q1,q3)
-    me2 = sq(p1); mt2=sq(q1)
-    me = sqrt(me2), mt = sqrt(mt2)
+    ss = sq(p1+p2); tt = sq(p1-q1); s15 = s(p1,q3); s25 = s(p2,q3); s35 = (q1,q3)
+    me2 = sq(p1); mt2 = sq(q1)
+    me = sqrt(me2); mt = sqrt(mt2)
     s2n = s(pol1,p2); s3n = s(pol1,q1); s4n = s(pol1,q2); s5n = s(pol1,q3)
     s1m = s(pol2,p1); s3m = s(pol2,q1); s4m = s(pol2,q2); s5m = s(pol2,q3)
     s1k = s(pol3,p1); s2k = s(pol3,p2); s4k = s(pol3,q2); s5k = s(pol3,q3)
