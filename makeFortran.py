@@ -1,24 +1,97 @@
 import re
-import os
+from pathlib import Path
+import argparse
+
+
+patternlist = [['SMP', 'm', 'e'], ['SMP', 'm', 'tau'], ['^'], ['Momentum'],
+               ['Alpha'], ['Re', 'X', 'DiscB', '-', 's', '-', 't', '+', '2', '*',
+                'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'],
+               ['Re', 'X', 'DiscB', 't', 'me', 'mt'],
+               ['Re', 'X', 'ScalarC0IR6', 's', 'me', 'me'],
+               ['Re', 'X', 'ScalarC0IR6', 's', 'mt', 'mt'],
+               ['Im', 'X', 'DiscB', 's', 'me', 'me'],
+               ['Im', 'X', 'DiscB', 's', 'mt', 'mt'],
+               ['Eps', 'p2', 'q1', 'q2', 'sp1'], ['Eps', 'p2', 'q1', 'q2', 'sp2'],
+               ['Eps', 'p2', 'q1', 'q2', 'sq1'], ['Eps', 'p2', 'q1', 'q2', 'sq2'],
+               ['Eps', 'p2', 'q1', 'sp1', 'sp2'], ['Eps', 'p2', 'q1', 'sp1', 'sq1'],
+               ['Eps', 'p2', 'q1', 'sp1', 'sq2'], ['Eps', 'p2', 'q1', 'sp2', 'sq1'],
+               ['Eps', 'p2', 'q1', 'sp2', 'sq2'], ['Eps', 'p2', 'q1', 'sq1', 'sq2'],
+               ['Eps', 'p2', 'q2', 'sp1', 'sp2'], ['Eps', 'p2', 'q2', 'sp1', 'sq1'],
+               ['Eps', 'p2', 'q2', 'sp1', 'sq2'], ['Eps', 'p2', 'q2', 'sp2', 'sq1'],
+               ['Eps', 'p2', 'q2', 'sp2', 'sq2'], ['Eps', 'p2', 'q2', 'sq1', 'sq2'],
+               ['Eps', 'q1', 'q2', 'sp1', 'sp2'], ['Eps', 'q1', 'q2', 'sp1', 'sq1'],
+               ['Eps', 'q1', 'q2', 'sp1', 'sq2'], ['Eps', 'q1', 'q2', 'sp2', 'sq1'],
+               ['Eps', 'q1', 'q2', 'sp2', 'sq2'], ['Eps', 'q1', 'q2', 'sq1', 'sq2'],
+               ['Eps', 'p2', 'sp1', 'sp2', 'sq1'], ['Eps', 'p2', 'sp1', 'sp2', 'sq2'],
+               ['Eps', 'p2', 'sp1', 'sq1', 'sq2'], ['Eps', 'p2', 'sp2', 'sq1', 'sq2'],
+               ['Eps', 'q1', 'sp1', 'sp2', 'sq1'], ['Eps', 'q1', 'sp1', 'sp2', 'sq2'],
+               ['Eps', 'q1', 'sp1', 'sq1', 'sq2'], ['Eps', 'q1', 'sp2', 'sq1', 'sq2'],
+               ['Eps', 'q2', 'sp1', 'sp2', 'sq1'], ['Eps', 'q2', 'sp1', 'sp2', 'sq2'],
+               ['Eps', 'q2', 'sp1', 'sq1', 'sq2'], ['Eps', 'q2', 'sp2', 'sq1', 'sq2'],
+               ['Eps', 'sp1', 'sp2', 'sq1', 'sq2'],
+               ['Re', 'X', 'DiscB', 's', 'me', 'me'], ['Re', 'X', 'DiscB', 's', 'mt', 'mt'],
+               ['Pi'], ['Epsilon'],
+               ['PaXKallenLambda', 't', 'me', '**', '2', 'mt', '**', '2'],
+               ['Log', 'mt', '**', '2', '/', 's'], ['Log', 'me', '**', '2', '/', 's'],
+               ['Log', 'me', '**', '2', '/', 'mt', '**', '2'],
+               ['Log', 'ScaleMu', '**', '2', '/', 'mt', '**', '2'],
+               ['Log', 'ScaleMu', '**', '2', '/', 'me', '**', '2'],
+               ['Re', 'X', 'ScalarC0IR6', 't', 'me', 'mt'],
+               ['Re', 'X', 'ScalarC0IR6', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'],
+               ['Im', 'X', 'ScalarC0IR6', 't', 'me', 'mt'],
+               ['Im', 'X', 'ScalarC0IR6', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'],
+               ['Re', 'X', 'ScalarC0', 's', 'me', '**', '2', 'me', '**', '2', '0', '0', 'me'],
+               ['Im', 'X', 'ScalarC0', 's', 'me', '**', '2', 'me', '**', '2', '0', '0', 'me'],
+               ['Re', 'X', 'ScalarC0', 's', 'mt', '**', '2', 'mt', '**', '2', '0', '0', 'mt'],
+               ['Im', 'X', 'ScalarC0', 's', 'mt', '**', '2', 'mt', '**', '2', '0', '0', 'mt'],
+               ['PaXKallenLambda', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', '**', '2', 'mt', '**', '2'],
+               ['PaXKallenLambda', 'me', '**', '2', 'mt', '**', '2', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2'],
+               ['s'], ['t']]
+
+replacementlist = [['me'], ['mt'], ['**'], [], ['alpha'], ['discbuet'], ['discbtet'],
+                   ['scalarc0ir6se'], ['scalarc0ir6st'], ['discbseIm'], ['discbstIm'],
+                   ['asym234n1'], ['asym234n2'], ['asym234n3'], ['asym234n4'],
+                   ['asym23n1n2'], ['asym23n1n3'], ['asym23n1n4'], ['asym23n2n3'],
+                   ['asym23n2n4'], ['asym23n3n4'], ['asym24n1n2'], ['asym24n1n3'],
+                   ['asym24n1n4'], ['asym24n2n3'], ['asym24n2n4'], ['asym24n3n4'],
+                   ['asym34n1n2'], ['asym34n1n3'], ['asym34n1n4'], ['asym34n2n3'],
+                   ['asym34n2n4'], ['asym34n3n4'], ['asym2n1n2n3'], ['asym2n1n2n4'],
+                   ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'],
+                   ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'],
+                   ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4'], ['discbse'],
+                   ['discbst'], ['pi'], ['sing'],
+                   ['me**4 - 2*me**2*(mt**2+t) + (mt**2 - t)**2'],
+                   ['logst'], ['logse'], ['logte'], ['logtm'], ['logem'],
+                   ['scalarc0ir6tte'], ['scalarc0ir6ute'], ['scalarc0ir6tteIm'],
+                   ['scalarc0ir6uteIm'], ['scalarc0se'], ['scalarc0seIm'],
+                   ['scalarc0st'], ['scalarc0stIm'],
+                   ['me**4-2*me**2*(mt**2+s+t)+(s+t-mt**2)**2'],
+                   ['me**4-2*me**2*(mt**2+s+t)+(s+t-mt**2)**2'], ['ss'], ['tt']]
+
+REPLACEMENTS = {tuple(k): v for k, v in zip(patternlist, replacementlist)}
 
 #Takes all input files and writes all output strings into a single txt file
-def process_directories(dir1, dir2, output_file):
-    all_files = []
-    
-    # Gather all text files from both directories
-    for directory in [dir1, dir2]:
-        for root, _, files in os.walk(directory):
-            for file in files:
-                if file.endswith('.txt'):
-                    all_files.append(os.path.join(root, file))
-    
-    with open(output_file, 'w') as outfile:
-        for filepath in all_files:
-            # Process each file
+def process_directories(directories, output_file):
+    """Collect *.txt files from all directories and write the converted
+    output to ``output_file``.
+
+    Parameters
+    ----------
+    directories : iterable of str or Path
+        Paths containing the text files to process.
+    output_file : str or Path
+        File path where the Fortran code will be written.
+    """
+
+    files = []
+    for directory in directories:
+        files.extend(sorted(Path(directory).rglob("*.txt")))
+
+    with open(output_file, "w") as outfile:
+        for filepath in files:
             tokens = tokenize_expression(read_file_and_store_words(filepath))
             formatted_string = format_output(tokens)
-            
-            # Write to the output file with comments
+
             outfile.write(f"// Output from {filepath}\n")
             outfile.write(formatted_string + "\n\n")
 
@@ -73,21 +146,18 @@ def replace_pattern(lst, sublist, replacement):
 
 #Replaces all patterns defined by patternlist with replacementlist
 def replace_all_patterns(lst):
-    patternlist = [['SMP', 'm', 'e',], ['SMP', 'm', 'tau'], ['^'], ['Momentum'], ['Alpha'], ['Re', 'X', 'DiscB', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'], ['Re', 'X', 'DiscB', 't', 'me', 'mt'], ['Re', 'X', 'ScalarC0IR6', 's', 'me', 'me'], ['Re', 'X', 'ScalarC0IR6', 's', 'mt', 'mt'], ['Im', 'X', 'DiscB', 's', 'me', 'me'], ['Im', 'X', 'DiscB', 's', 'mt', 'mt'], ['Eps', 'p2', 'q1', 'q2', 'sp1'], ['Eps', 'p2', 'q1', 'q2', 'sp2'], ['Eps', 'p2', 'q1', 'q2', 'sq1'], ['Eps', 'p2', 'q1', 'q2', 'sq2'],
-                  ['Eps', 'p2', 'q1', 'sp1', 'sp2'], ['Eps', 'p2', 'q1', 'sp1', 'sq1'], ['Eps', 'p2', 'q1', 'sp1', 'sq2'], ['Eps', 'p2', 'q1', 'sp2', 'sq1'], ['Eps', 'p2', 'q1', 'sp2', 'sq2'], ['Eps', 'p2', 'q1', 'sq1', 'sq2'], ['Eps', 'p2', 'q2', 'sp1', 'sp2'], ['Eps', 'p2', 'q2', 'sp1', 'sq1'], 
-                  ['Eps', 'p2', 'q2', 'sp1', 'sq2'], ['Eps', 'p2', 'q2', 'sp2', 'sq1'], ['Eps', 'p2', 'q2', 'sp2', 'sq2'], ['Eps', 'p2', 'q2', 'sq1', 'sq2'], ['Eps', 'q1', 'q2', 'sp1', 'sp2'], ['Eps', 'q1', 'q2', 'sp1', 'sq1'], 
-                  ['Eps', 'q1', 'q2', 'sp1', 'sq2'], ['Eps', 'q1', 'q2', 'sp2', 'sq1'], ['Eps', 'q1', 'q2', 'sp2', 'sq2'], ['Eps', 'q1', 'q2', 'sq1', 'sq2'], ['Eps', 'p2', 'sp1', 'sp2', 'sq1'], ['Eps', 'p2', 'sp1', 'sp2', 'sq2'], ['Eps', 'p2', 'sp1', 'sq1', 'sq2'], ['Eps', 'p2', 'sp2', 'sq1', 'sq2'], 
-                  ['Eps', 'q1', 'sp1', 'sp2', 'sq1'], ['Eps', 'q1', 'sp1', 'sp2', 'sq2'], ['Eps', 'q1', 'sp1', 'sq1', 'sq2'], ['Eps', 'q1', 'sp2', 'sq1', 'sq2'], ['Eps', 'q2', 'sp1', 'sp2', 'sq1'], ['Eps', 'q2', 'sp1', 'sp2', 'sq2'], ['Eps', 'q2', 'sp1', 'sq1', 'sq2'], ['Eps', 'q2', 'sp2', 'sq1', 'sq2'], 
-                  ['Eps', 'sp1', 'sp2', 'sq1', 'sq2'], ['Re', 'X', 'DiscB', 's', 'me', 'me'], ['Re', 'X', 'DiscB', 's', 'mt', 'mt'], ['Pi'], ['Epsilon'], ['PaXKallenLambda', 't', 'me', '**', '2', 'mt', '**', '2'], ['Log', 'mt', '**', '2', '/', 's'], ['Log', 'me', '**', '2', '/', 's'], ['Log', 'me', '**', '2', '/', 'mt', '**', '2'],
-                  ['Log', 'ScaleMu', '**', '2', '/', 'mt', '**', '2'], ['Log', 'ScaleMu', '**', '2', '/', 'me', '**', '2'], ['Re', 'X', 'ScalarC0IR6', 't', 'me', 'mt'], ['Re', 'X', 'ScalarC0IR6', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'], ['Im', 'X', 'ScalarC0IR6', 't', 'me', 'mt'], ['Im', 'X', 'ScalarC0IR6', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', 'mt'], ['Re', 'X', 'ScalarC0', 's', 'me', '**', '2', 'me', '**', '2', '0', '0', 'me'], 
-                  ['Im', 'X', 'ScalarC0', 's', 'me', '**', '2', 'me', '**', '2', '0', '0', 'me'], ['Re', 'X', 'ScalarC0', 's', 'mt', '**', '2', 'mt', '**', '2', '0', '0', 'mt'], ['Im', 'X', 'ScalarC0', 's', 'mt', '**', '2', 'mt', '**', '2', '0', '0', 'mt'], ['PaXKallenLambda', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2', 'me', '**', '2', 'mt', '**', '2'], ['PaXKallenLambda', 'me', '**', '2', 'mt', '**', '2', '-', 's', '-', 't', '+', '2', '*', 'me', '**', '2', '+', '2', '*', 'mt', '**', '2'], ['s'], ['t']]
-    replacementlist = [['me'], ['mt'], ['**'], [], ['alpha'], ['discbuet'], ['discbtet'], ['scalarc0ir6se'], ['scalarc0ir6st'], ['discbseIm'], ['discbstIm'], ['asym234n1'], ['asym234n2'], ['asym234n3'], ['asym234n4'], ['asym23n1n2'], ['asym23n1n3'], ['asym23n1n4'], ['asym23n2n3'], ['asym23n2n4'], ['asym23n3n4'], ['asym24n1n2'], ['asym24n1n3'], ['asym24n1n4'], ['asym24n2n3'],
-                      ['asym24n2n4'], ['asym24n3n4'], ['asym34n1n2'], ['asym34n1n3'], ['asym34n1n4'], ['asym34n2n3'],
-                      ['asym34n2n4'], ['asym34n3n4'],['asym2n1n2n3'], ['asym2n1n2n4'], ['asym2n1n3n4'], ['asym2n2n3n4'], ['asym3n1n2n3'], ['asym3n1n2n4'], ['asym3n1n3n4'], ['asym3n2n3n4'], ['asym4n1n2n3'], ['asym4n1n2n4'], ['asym4n1n3n4'], ['asym4n2n3n4'], ['asymn1n2n3n4'], ['discbse'], ['discbst'],
-                      ['pi'], ['sing'], ['me**4 - 2*me**2*(mt**2+t) + (mt**2 - t)**2'], ['logst'], ['logse'], ['logte'], ['logtm'], ['logem'], ['scalarc0ir6tte'], ['scalarc0ir6ute'], ['scalarc0ir6tteIm'], ['scalarc0ir6uteIm'], ['scalarc0se'], ['scalarc0seIm'], ['scalarc0st'], ['scalarc0stIm'], ['me**4-2*me**2*(mt**2+s+t)+(s+t-mt**2)**2'], ['me**4-2*me**2*(mt**2+s+t)+(s+t-mt**2)**2'], ['ss'], ['tt']]
-
-    for i in range(len(patternlist)):
-        lst = replace_pattern(lst, patternlist[i], replacementlist[i])
+    i = 0
+    while i < len(lst):
+        replaced = False
+        for pattern, replacement in REPLACEMENTS.items():
+            m = len(pattern)
+            if lst[i:i + m] == list(pattern):
+                lst[i:i + m] = replacement
+                i += len(replacement)
+                replaced = True
+                break
+        if not replaced:
+            i += 1
 
 def tokenize_expression(expression):
     # Regular expression to match alphanumeric sequences or specific characters
@@ -126,9 +196,27 @@ def read_file_and_store_words(filename):
 
     return content
     
-if __name__ == "__main__":
-    process_directories('./virtual/', './real/', 'fortran')
+def main():
+    parser = argparse.ArgumentParser(description="Convert Mathematica output to Fortran")
+    parser.add_argument(
+        "--directories",
+        nargs="*",
+        default=["./virtual/", "./real/"],
+        help="Directories containing .txt files",
+    )
+    parser.add_argument(
+        "--output",
+        default="fortran",
+        help="Output file name",
+    )
+
+    args = parser.parse_args()
+    process_directories(args.directories, args.output)
     print("done")
+
+
+if __name__ == "__main__":
+    main()
 
 
 
